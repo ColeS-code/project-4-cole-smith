@@ -69,6 +69,19 @@ const printQuote = () => {
   document.querySelector('#quote-box').innerHTML = html
 }
 
+const randomColor = () => {
+  colorPicker = Math.floor(Math.random() + 1)
+}
+
+const setBG = () => {
+
+  const red = randomColor(255)
+  const green = randomColor(255)
+  const blue = randomColor(255)
+
+  return [red, green, blue]
+}
+
 
 
 
