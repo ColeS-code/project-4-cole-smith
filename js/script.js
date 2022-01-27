@@ -10,13 +10,39 @@ Project 4 - Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
-
+const quotes = [
+  {
+    quote:"The greater the difficulty, the more glory in surmounting it.",
+    source:"Epicurus",
+    citation:"unknown",
+    year: 341,
+    tag:["fruits of our labor"]  
+  },
+  {
+    quote:"The only thing I know is that I know nothing",
+    source:"Socrates",
+  },
+  {
+    quote:"The mind is furnished with ideas by experience alone.",
+    source:"John Locke",
+  },
+  {
+    quote:"virtue is nothing else than right reason.",
+    source:"Seneca The Younger",
+  },
+  {
+    quote:"Liberty consists in doing what one desires",
+    source:"John Stuart Mill",
+  },
+]
 
 /***
  * `getRandomQuote` function
 ***/
+const getRandomQuote = () => {
+  
 
+}
 
 
 /***
