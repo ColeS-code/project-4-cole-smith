@@ -40,16 +40,29 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 const getRandomQuote = () => {
-  const randomPick = math.floor(math.random(quotes.length) * quotes)
-  return randomPick
+  let randomPick = math.floor(math.random() * quotes.length)
+  return quotes[randomPick]
 }
 
 /***
  * `printQuote` function
 ***/
 const printQuote = () => {
-  
+  randomQuote = getRandomQuote()
 
+  let html = `<p class="quote">${ randomQuote.quote }</p><p class="source">${ randomQuote.source }`
+
+  if (randomQuote.citation) {
+    html += `<span class="citation">${ randomQuote.citation }</span>`
+  }
+
+  if (randomQuote.year) {
+    html += `<span class="year">${ randomQuote.year }</span>`
+  }
+
+  if (randomQuote.tag) {
+    html += `<span class="tag">${randomQuote.tag}</span>`
+  }
 }
 
 
