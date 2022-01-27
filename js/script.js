@@ -69,9 +69,9 @@ const printQuote = () => {
   document.querySelector('#quote-box').innerHTML = html
 }
 
-const randomColor = () => {
-  colorPicker = Math.floor(Math.random() + 1)
-}
+const randomColor = () => 
+   Math.floor(Math.random()) 
+
 
 const setBG = () => {
 
@@ -82,9 +82,16 @@ const setBG = () => {
   return [red, green, blue]
 }
 
+const newBG = () => {
+  change = setBG()
+  document.body.style.background = change
+}
 
 
 
+
+
+setInterval(printQuote, 10000)
 
 
 
