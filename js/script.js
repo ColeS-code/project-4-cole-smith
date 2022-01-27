@@ -40,7 +40,7 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 const getRandomQuote = () => {
-  let randomPick = math.floor(math.random() * quotes.length)
+  let randomPick = Math.floor(Math.random() * quotes.length)
   return quotes[randomPick]
 }
 
@@ -61,13 +61,17 @@ const printQuote = () => {
   }
 
   if (randomQuote.tag) {
-    html += `<span class="tag">${randomQuote.tag}</span>`
+    html += `<span class="tag">${randomQuote.tag.join(", ")}</span>`
   }
 
   html += `</p>`
 
   document.querySelector('#quote-box').innerHTML = html
 }
+
+
+
+
 
 
 
