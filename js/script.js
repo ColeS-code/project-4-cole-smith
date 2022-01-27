@@ -63,6 +63,10 @@ const printQuote = () => {
   if (randomQuote.tag) {
     html += `<span class="tag">${randomQuote.tag}</span>`
   }
+
+  html += `</p>`
+
+  document.querySelector('#quote-box').innerHTML = html
 }
 
 
