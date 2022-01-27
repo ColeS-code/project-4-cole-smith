@@ -40,14 +40,18 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 const getRandomQuote = () => {
-  
-
+  const randomPick = math.floor(math.random(quotes.length) * quotes)
+  return randomPick
 }
-
 
 /***
  * `printQuote` function
 ***/
+const printQuote = () => {
+  
+
+}
+
 
 
 
