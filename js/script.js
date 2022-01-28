@@ -54,11 +54,11 @@ const printQuote = () => {
   }
 
   if (randomQuote.year) {
-    html += `<span class="year">${ randomQuote.year }</span>`
+    html += `<span class="year">${ randomQuote.year.join(", ") }</span>`
   }
 
   if (randomQuote.tag) {
-    html += `<span class="tag">${randomQuote.tag.join(", ")}</span>`
+    html += `<span class="tag">${ randomQuote.tag.join(", ") }</span>`
   }
 
   html += `</p>`
