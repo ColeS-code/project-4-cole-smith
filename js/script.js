@@ -69,15 +69,16 @@ const printQuote = () => {
   document.querySelector('#quote-box').innerHTML = html
 }
 
-const randomColor = () => 
-   Math.floor(Math.random()) 
-
+const randomColor = () => {
+  const colorPicker = Math.floor(Math.random()* 16777215).toString(16)
+  return randomColor[colorPicker]
+}
 
 const setBG = () => {
 
-  const red = randomColor(255)
-  const green = randomColor(255)
-  const blue = randomColor(255)
+  const red = colorPicker(255)
+  const green = colorPicker(255)
+  const blue = colorPicker(255)
 
   return [red, green, blue]
 }
