@@ -12,7 +12,7 @@ const quotes = [
     quote:"The greater the difficulty, the more glory in surmounting it.",
     source:"Epicurus",
     citation:"unknown",
-    year:341,
+    year:"341",
     tag:["fruits of our labor"]  
   },
   {
@@ -54,7 +54,7 @@ const printQuote = () => {
   }
 
   if (randomQuote.year) {
-    html += `<span class="year">${ randomQuote.year.join(", ") }</span>`
+    html += `<span class="year">${ randomQuote.year }</span>`
   }
 
   if (randomQuote.tag) {
