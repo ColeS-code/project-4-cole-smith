@@ -3,12 +3,9 @@ Treehouse Techdegree:
 Project 4 - Random Quote Generator
 *************************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community
 
 /*** 
- * `quotes` array 
+ * The `quotes` array is a multidimensinal array that nests the quotes used in the functions below.
 ***/
 const quotes = [
   {
@@ -37,7 +34,7 @@ const quotes = [
 ]
 
 /***
- * `getRandomQuote` function
+ * The `getRandomQuote` function picks a random quote from above using the math.floor and math.random to select an integer that represents a quote.
 ***/
 const getRandomQuote = () => {
   let randomPick = Math.floor(Math.random() * quotes.length)
@@ -45,7 +42,7 @@ const getRandomQuote = () => {
 }
 
 /***
- * `printQuote` function
+ * The `printQuote` function displays a random quote on the screen, and if it has special appends then they will appear as well with the If statements below. 
 ***/
 const printQuote = () => {
   randomQuote = getRandomQuote()
@@ -69,12 +66,13 @@ const printQuote = () => {
   document.querySelector('#quote-box').innerHTML = html
 }
 
+// setBg snags a random integer to represent a random color on screen with the quotes. (CSS Tricks)
 const setBg = () => {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   document.body.style.backgroundColor = "#" + randomColor;
 }
 
-
+// The setInterval function allows the rgb and quotes to cycle back through the math functions above to change every 10 seconds.
 setInterval(printQuote, 10000)
 setInterval(setBg, 10000)
 
