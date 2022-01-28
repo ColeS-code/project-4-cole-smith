@@ -15,7 +15,7 @@ const quotes = [
     quote:"The greater the difficulty, the more glory in surmounting it.",
     source:"Epicurus",
     citation:"unknown",
-    year: 341,
+    year:341,
     tag:["fruits of our labor"]  
   },
   {
@@ -69,31 +69,14 @@ const printQuote = () => {
   document.querySelector('#quote-box').innerHTML = html
 }
 
-const randomColor = () => {
-  const colorPicker = Math.floor(Math.random()* 16777215).toString(16)
-  return randomColor[colorPicker]
+const setBg = () => {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = "#" + randomColor;
 }
-
-const setBG = () => {
-
-  const red = colorPicker(255)
-  const green = colorPicker(255)
-  const blue = colorPicker(255)
-
-  return [red, green, blue]
-}
-
-const newBG = () => {
-  change = setBG()
-  document.body.style.background = change
-}
-
-
-
 
 
 setInterval(printQuote, 10000)
-
+setInterval(setBg, 10000)
 
 
 
@@ -103,3 +86,4 @@ setInterval(printQuote, 10000)
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", setBg, false);
